@@ -8,6 +8,10 @@ public class GreenEyesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GreenEyesApplication.class, args);
+		
+		System.out.println("Criei um novo serviço");
 	}
 
+	
+	
 }
