@@ -18,15 +18,9 @@
 	</properties>
 	<dependencies>
 		<dependency>
-<<<<<<< HEAD
 			<groupId>io.springfox</groupId>	
 			<artifactId>springfox-swagger2</artifactId>
-		<version>2.6.1</version>
-=======
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
 			<version>2.6.1</version>
->>>>>>> a265a5ec2d5264497711bfbccfa4f6b91e7752da
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>

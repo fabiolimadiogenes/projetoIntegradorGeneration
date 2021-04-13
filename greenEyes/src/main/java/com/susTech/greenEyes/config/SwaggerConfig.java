@@ -1,8 +1,5 @@
 package com.susTech.greenEyes.config;
-<<<<<<< HEAD
-=======
 
->>>>>>> a265a5ec2d5264497711bfbccfa4f6b91e7752da
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -17,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @Configuration
 public class SwaggerConfig {
-<<<<<<< HEAD
+
 	@Bean    
 	public Docket docket(){       
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -43,9 +40,6 @@ public class SwaggerConfig {
 				"Estudante GenerationBrasil Java Full-Stack");		
 	}
 
-}
-=======
-	
 	@Bean
 	public Docket docket(){
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -70,4 +64,4 @@ public class SwaggerConfig {
 			"");
 		}
 }
->>>>>>> a265a5ec2d5264497711bfbccfa4f6b91e7752da
+
