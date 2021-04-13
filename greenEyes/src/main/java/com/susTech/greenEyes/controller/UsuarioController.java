@@ -32,20 +32,20 @@ public class UsuarioController
 	@Autowired
 	private UsuarioService usuarioService;
 	
-	/*
-	 * @GetMapping public ResponseEntity<List<Usuario>> getAll() { return
-	 * ResponseEntity.ok(repository.findAll()); }
-	 * 
-	 * @GetMapping("/{id}") public ResponseEntity<Usuario>
-	 * findByIdCategoria(@PathVariable long id) { return repository.findById(id)
-	 * .map(resp -> ResponseEntity.ok(resp))
-	 * .orElse(ResponseEntity.notFound().build()); }
-	 * 
-	 * @GetMapping("/nome/{nome}") public ResponseEntity<List<Usuario>>
-	 * getByNome(@PathVariable String nome) { return
-	 * ResponseEntity.status(HttpStatus.OK).body(repository.
-	 * findAllByNomeContainingIgnoreCase(nome)); }
-	 */
+	
+	  @GetMapping public ResponseEntity<List<Usuario>> getAll() { return
+	  ResponseEntity.ok(repository.findAll()); }
+	  
+	  @GetMapping("/{id}") public ResponseEntity<Usuario>
+	  findByIdCategoria(@PathVariable long id) { return repository.findById(id)
+	  .map(resp -> ResponseEntity.ok(resp))
+	  .orElse(ResponseEntity.notFound().build()); }
+	  
+	  @GetMapping("/nome/{nome}") public ResponseEntity<List<Usuario>>
+	  getByNome(@PathVariable String nome) { return
+	  ResponseEntity.status(HttpStatus.OK).body(repository.
+	  findAllByNomeContainingIgnoreCase(nome)); }
+	 
 	@PostMapping("/logar")
 	public ResponseEntity<Login> Authentication(@RequestBody Optional<Login> user)
 	{
@@ -64,12 +64,12 @@ public class UsuarioController
 	}
 	
 			
-	/*
-	 * @PutMapping public ResponseEntity<Usuario> put(@RequestBody Usuario
-	 * categoria) { return
-	 * ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria)); }
-	 * 
-	 * @DeleteMapping("/{id}") public void delete (@PathVariable long id) {
-	 * repository.deleteById(id); }
-	 */
+	
+	  @PutMapping public ResponseEntity<Usuario> put(@RequestBody Usuario
+	  categoria) { return
+	  ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria)); }
+	  
+	  @DeleteMapping("/{id}") public void delete (@PathVariable long id) {
+	  repository.deleteById(id); }
+	 
 }

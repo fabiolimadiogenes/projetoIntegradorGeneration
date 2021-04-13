@@ -1,4 +1,8 @@
 package com.susTech.greenEyes.config;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a265a5ec2d5264497711bfbccfa4f6b91e7752da
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -13,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @Configuration
 public class SwaggerConfig {
+<<<<<<< HEAD
 	@Bean    
 	public Docket docket(){       
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -39,3 +44,30 @@ public class SwaggerConfig {
 	}
 
 }
+=======
+	
+	@Bean
+	public Docket docket(){
+		return new Docket(DocumentationType.SWAGGER_2)
+			.select()
+			.apis( RequestHandlerSelectors.basePackage
+			("com.susTech.greenEyes.controller") )
+			.paths(PathSelectors.any())
+			.build()
+			.apiInfo(apiInfo());
+	}
+	private ApiInfo apiInfo(){
+		return new ApiInfoBuilder()
+			.title("Green Eyes")
+			.description("API do Projeto integrador")
+			.version("1.0")
+			.contact(contact())
+			.build();
+	}
+	private Contact contact(){
+		return new Contact("Grupo 03 Projeto integrador",
+			"https://github.com/fabiolimadiogenes/projetoIntegradorGeneration",
+			"");
+		}
+}
+>>>>>>> a265a5ec2d5264497711bfbccfa4f6b91e7752da
