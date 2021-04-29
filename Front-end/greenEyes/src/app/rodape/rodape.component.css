@@ -1,3 +1,11 @@
+.backFoot{
+    background-color:#235945;
+}
+
+.copyright{
+    background-color: #0d2622;
+}
+
 ul.social-network{
     list-style: none;
     padding: 0;
@@ -17,8 +25,4 @@ ul.social-network li{
 
 .fa:hover{
     color: rgb(1, 146, 66);
-}
-
-.copyright{
-    background-color: rgb(85, 85, 85);
 }
