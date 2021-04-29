@@ -1,0 +1,21 @@
+.corPadrao{
+    background-color: rgb(108, 155, 108);
+}
+ .produtos{
+    text-decoration:none;
+    color: darkolivegreen;
+    
+ }
+
+ .produtos:hover{
+    color: rgb(191, 214, 151);
+ }
+
+ .fav{
+    text-decoration:none;
+    color: darkolivegreen;
+ }
+
+ .fav:hover{
+    color: rgb(146, 2, 2);
+ }
