@@ -1,84 +1,79 @@
-<div class="container-fluid bg-menu text-white fixed-top">
-    <div class="row">
-      <div class="col-3">
-        <img src="https://imgur.com/h8vU4mt.jpg" alt="logo" width="150px" height="150px" class="img-fluid">
-      </div>
-      <div class="col-6">
-        <form class="form-inline my-2 my-lg-0 ">
-          <div class="input-group mr-sm-2 w-px m-5">
-            <div class="input-group-prepend ">
-              <span class="input-group-text bg-search" id="basic-addon1"> <img src="https://imgur.com/hMLcQar.jpg" height="20px" width="20px" alt="shopping cart icon"></span>
-            </div>
-            <input type="text" class="form-control" placeholder="pesquisar" aria-label="pesquisar" aria-describedby="basic-addon1">
-          </div>
-        </form>
-      </div>
-  
+<!-- Header-->
+<header class="navbar navbar-expand-lg bg-menu">
+  <div class="container-fluid justify-content-between">
+
+    <!-- Left elements -->
+    <div class="d-flex">
+      <!-- Logo -->
+      <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+        <img src="https://imgur.com/h8vU4mt.jpg" height="120" alt="">
+      </a>
     </div>
-            <!--categorias-->
-    <div class="row">
-      <div class="col-10">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon "></span>
-          </button>
-  
-          <div class="collapse navbar-collapse -sm-flex" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active margin-l">
-                <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Domésticos</a>
-              </li>
-              <li class="nav-item pl-5">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-            </ul>
-  
-            <div class=" navbar-expand-lg pl-5">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item p-2 margin-left">
-                  <a class="nav-link text-white " href="#">
-                    <img src="https://imgur.com/h7fhQ9C.jpg" height="20px" width="20px" alt="login icon">
-                  </a>
-                </li>
-                <li class="nav-item p-2">
-                  <a class="nav-link text-white" href="#">
-                    <img src="https://imgur.com/oEmpmDj.jpg" height="20px" width="20px" alt="shopping cart icon">
-                  </a>
-                </li>
-                <li class="nav-item p-2">
-                  <a class="nav-link text-white" href="#" >
-                    <img src="https://imgur.com/4I8AUcn.jpg" height="20px" width="20px" alt="like icon">
-                  </a>
-                </li>
-              </ul>
-          </div>
-  
-          </div>
-        </nav>
-      </div>
-  
-  
-  
-    </div>
+    <!-- Left elements -->
+
+    <!-- Center elements -->
+    <!-- Pesquisar -->
+    <form class="input-group w-50 my-auto d-none d-sm-flex">
+      <input autocomplete="off"type="search" class="form-control rounded" placeholder="Search">
+      <span class="input-group-text border-0 d-none d-lg-flex fa-searchy">
+        <i class="fas fa-search"></i>
+      </span>
+    </form>
+    <!-- Center elements -->
+
+    <!-- Right elements -->
+    <ul class="navbar-nav flex-row">
+
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"aria-expanded="false">
+        <mat-icon>favorite</mat-icon>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Some news</a></li>
+          <li><a class="dropdown-item" href="#">Another news</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+        <mat-icon>shopping_cart</mat-icon>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Some news</a></li>
+          <li><a class="dropdown-item" href="#">Another news</a></li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+          <mat-icon>person</mat-icon>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" href="#">My profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Right elements -->
   </div>
+</header>
+
+
+<!-- Navbar -->
+<nav class="navbar bg-menu2">
+  <form class="container-fluid justify-content-center">
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Home</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Categoria</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Categoria</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Categoria</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Categoria</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Categoria</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Categoria</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Sobre nós</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Contato</button>
+    <button class="btn btn-sm btn-outline-secondary me-2 bmenu2" type="button">Blog</button>
+  </form>
+</nav>
