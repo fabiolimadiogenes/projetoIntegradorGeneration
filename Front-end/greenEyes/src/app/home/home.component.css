@@ -4,12 +4,10 @@
  .produtos{
     text-decoration:none;
     color: darkolivegreen;
-    
+
  }
 
- .produtos:hover{
-    color: rgb(191, 214, 151);
- }
+
 
  .fav{
     text-decoration:none;
@@ -19,3 +17,27 @@
  .fav:hover{
     color: rgb(146, 2, 2);
  }
+
+ .bmenu2{
+  color: #235945;
+  border-radius: 25px;
+  border-color: #235945;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 30px;
+}
+
+.bmenu2:hover{
+  color: white;
+  background-color: rgb(146, 2, 2);
+
+}
+
+.card:hover{
+  transition: ease-in-out;
+  transition-duration: 200ms;
+  transition-delay: 200ms;
+  border-color: #235945;
+  border-width: 3px;
+}
