@@ -28,3 +28,11 @@
   border-color: rgb(255, 255, 255);
   border-radius: 8%;
 }
+
+.background{
+  background-color: #0d2622;
+}
+
+.fill{
+  height:100%;
+}
