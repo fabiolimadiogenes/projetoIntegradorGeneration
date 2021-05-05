@@ -1,5 +1,3 @@
-
-
 export class Login
 {
     public id: number;

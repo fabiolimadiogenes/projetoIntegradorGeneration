@@ -17,12 +17,12 @@ export class AuthService {
 
   entrar(userLogin: Login): Observable<Login>
   {
-    return this.http.post<Login>('http://localhost:8080/usuario/logar', userLogin)
+    return this.http.post<Login>('http://localhost:8080/usuarios/logar', userLogin)
   }
 
   cadastrar(user: Usuario): Observable<Usuario>
   {
-    return this.http.post<Usuario>('http://localhost:8080/usuario/cadastrar', user)
+    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', user)
   }
 
   logado()
