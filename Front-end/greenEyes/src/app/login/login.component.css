@@ -1,6 +1,6 @@
 #img-bg{
     background-color: #0d2622;
-
+    z-index: 1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,4 +35,12 @@
 
 .fill{
   height:100%;
+}
+
+.b-Cadas:hover{
+
+  transition-duration: 300ms;
+  background-color:#2F734C;
+  border-color: #2F734C;
+  color: white;
 }
