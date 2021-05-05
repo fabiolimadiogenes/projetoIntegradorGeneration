@@ -25,7 +25,6 @@ public class Produto {
 	@NotNull
 	private double preco;
 	
-	@NotNull
 	private double desconto;
 
 	@NotNull

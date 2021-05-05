@@ -24,12 +24,15 @@ public class Usuario {
 	private String sobrenome;
 	
 	@NotNull
-	@Size (max = 50)
+	@Size (min = 3, max = 50)
 	private String email;
 	
 	@NotNull
-	@Size (min = 8, max = 50)
 	private String senha;
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public long getId() {
 		return id;
