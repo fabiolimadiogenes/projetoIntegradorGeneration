@@ -8,6 +8,7 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false, //Não solicita inicialização dos atributos
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
