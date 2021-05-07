@@ -22,11 +22,11 @@ public class Categoria {
 	private long id;
 
 	@NotNull
-	@Size (min = 5, max = 100)
+	@Size (max = 100)
 	private String nome;
 
 	@NotNull
-	@Size (min = 10, max = 500)
+	@Size ( max = 500)
 	private String descricao;
 
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
