@@ -14,7 +14,11 @@ export class ProdutoComponent implements OnInit {
   produto: Produto = new Produto();
   listaProdutos: Produto[];
 
-  constructor(private router: Router, private produtoService: ProdutoService) { }
+  constructor(
+
+    private router: Router,
+    private produtoService: ProdutoService
+    ) { }
 
   ngOnInit()
   {
@@ -23,6 +27,7 @@ export class ProdutoComponent implements OnInit {
       alert("Sua sessão expirou");
       this.router.navigate(["/entrar"]);
     }
+
     this.findAllProduto();
   }
 
@@ -37,7 +42,7 @@ export class ProdutoComponent implements OnInit {
   {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
-      alert("Categoria cadastrado com sucesso");
+      alert("Produto cadastrado com sucesso");
       this.findAllProduto();
       this.produto = new Produto();
     })

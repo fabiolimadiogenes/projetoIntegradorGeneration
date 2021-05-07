@@ -12,17 +12,20 @@ import { FormsModule } from '@angular/forms';
 })
 export class CategoriaComponent implements OnInit {
 
-  categoria: Categoria = new Categoria();
-  listaCategorias: Categoria[];
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
 
-  constructor(private router: Router, private categoriaService: CategoriaService) { }
+  constructor(
+    private router: Router,
+    private categoriaService: CategoriaService
+    ) { }
 
   ngOnInit()
   {
     if(environment.token == "")
     {
-      alert("Sua sessão expirou");
-      this.router.navigate(["/entrar"]);
+      //alert("Sua sessão expirou");
+      this.router.navigate(["/login"]);
     }
     this.findAllCategoria();
   }
