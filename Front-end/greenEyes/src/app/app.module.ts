@@ -16,6 +16,12 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     SobreNosComponent,
     ContatoComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    CategoriaEditComponent,
+    ProdutoEditComponent,
+    CategoriaDeleteComponent,
+    ProdutoDeleteComponent,
+    CategoriaComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
