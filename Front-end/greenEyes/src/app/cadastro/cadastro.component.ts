@@ -4,7 +4,7 @@ import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
 @Component({
-  selector: 'app-cadastro',
+  selector: 'app-cadastrar',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
@@ -44,3 +44,4 @@ export class CadastroComponent implements OnInit {
     }
   }
 }
+
