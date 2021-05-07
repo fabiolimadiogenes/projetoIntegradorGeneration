@@ -17,12 +17,12 @@ export class CategoriaService {
 
   getAllCategoria(): Observable<Categoria[]>
   {
-    return this.http.get<Categoria[]>("http://localhost:8080/tema", this.token);
+    return this.http.get<Categoria[]>("http://localhost:8080/categoria", this.token);
   }
 
   getByIdCategoria(id: number): Observable<Categoria>
   {
-    return this.http.get<Categoria>(`http://localhost:8080/categoria${id}`, this.token)
+    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria>
@@ -37,6 +37,6 @@ export class CategoriaService {
 
   deleteCategoria(id: number)
   {
-    return this.http.delete (`http://localhost:8080/categoria${id}`, this.token);
+    return this.http.delete (`http://localhost:8080/categoria/${id}`, this.token);
   }
 }
