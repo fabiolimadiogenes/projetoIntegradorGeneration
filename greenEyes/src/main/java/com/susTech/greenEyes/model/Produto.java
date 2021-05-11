@@ -19,13 +19,16 @@ public class Produto {
 	private long id;
 	
 	@NotNull
-	@Size (min = 5, max = 100)
+	@Size (max = 100)
 	private String nome;
 	
 	@NotNull
 	private double preco;
 	
 	private double desconto;
+	
+	@NotNull
+	private int descricao;
 
 	@NotNull
 	private int quantidade;
@@ -77,4 +80,14 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public int getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(int descricao) {
+		this.descricao = descricao;
+	}
+	
+	
 }
