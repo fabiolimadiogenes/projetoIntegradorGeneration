@@ -27,6 +27,8 @@ public class Produto {
 	
 	private double desconto;
 	
+	private String foto;
+	
 	@NotNull
 	private String descricao;
 
@@ -88,4 +90,14 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+	
 }
