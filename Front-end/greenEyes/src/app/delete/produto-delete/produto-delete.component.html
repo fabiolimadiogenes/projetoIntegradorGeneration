@@ -1,1 +1,29 @@
-<p>produto-delete works!</p>
+<div class="container-fluid" id='teste'>
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h1 class="text-center text-dark mt-3">Apagar Produto <img src="https://imgur.com/Gp1oXgg.png" alt="" width="30px" height="30px"></h1>
+  
+  
+        </div>
+    </div>
+  
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <h2 class="text-center text-secondary" id="mb30">Você tem certeza que deseja apagar esse produto?</h2>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center text-info">Nome do produto: {{produto.nome}}</h3>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center mb-3">
+            <button class="btn btn-danger mr-4" routerLink='/categoria'>Não</button>
+            <button class="btn btn-success" (click)='apagar()'>Sim</button>
+        </div>
+    </div>
+  </div>
+  

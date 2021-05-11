@@ -14,10 +14,10 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-
-    if(environment.token == ""){
-      //alert("Sua seção expirou, faça login novamente")
-      this.router.navigate(["/login"])
+    if(environment.token == "")
+    {
+      alert("Sua sessão expirou");
+      this.router.navigate(["/login"]);
     }
   }
 
