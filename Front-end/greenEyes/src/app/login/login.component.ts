@@ -4,12 +4,15 @@ import { environment } from 'src/environments/environment.prod';
 import { Login } from '../model/Login';
 import { AuthService } from '../service/auth.service';
 
+
 @Component({
   selector: 'app-entrar',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
+
 
   login: Login = new Login()
 
@@ -45,4 +48,5 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
 }

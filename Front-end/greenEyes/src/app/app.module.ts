@@ -1,7 +1,9 @@
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +49,8 @@ import { ProdutoComponent } from './produto/produto.component';
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
+    MatSliderModule,
+    MatFormFieldModule,
     FormsModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
