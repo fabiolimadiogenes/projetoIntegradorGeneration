@@ -1,0 +1,112 @@
+body {
+  font-family: "Signika", sans-serif;
+  font-size: 35px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.bg-grey {
+  background: #0d2622;
+}
+
+.logo-footer {
+  margin-bottom: 40px;
+}
+
+.corsend {
+  background-color: #0d2622;
+  color: #f5f5f5;
+}
+
+.corinput {
+  background-color: #f5f5f5;
+  color: #292929;
+}
+
+footer {
+  color: #f5f5f5ab;
+}
+
+footer p,a {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+footer h6 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+footer h6:after {
+  position: absolute;
+  content: "";
+  background: #f5f5f5ab;
+  width: 12%;
+  height: 1px;
+  left: 0;
+  bottom: -20px;
+}
+
+.btn-footer {
+  color: #f5f5f5ab;
+
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 43px;
+  font-size: 13px;
+  padding: 7px 30px;
+  line-height: 47px;
+}
+
+.btn-footer:hover {
+  text-decoration: none;
+}
+::placeholder {
+  font-size: 10px;
+  color: #f5f5f5ab;
+  font-style: italic;
+}
+
+.social .fa {
+  color: #f5f5f5ab;
+  font-size: 22px;
+  padding: 10px 15px;
+  background: #0d2622;
+}
+
+footer ul li {
+  list-style: none;
+  display: block;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #f5f5f5ab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #517265 !important;
+}
+
+/* Copyright Footer */
+.footer-copyright {
+  background: #2F734C;
+  padding: 5px 0;
+}
+.footer-copyright .logo {
+  display: inherit;
+}
+
+.footer-copyright nav {
+  float: right;
+  margin-top: 5px;
+}
