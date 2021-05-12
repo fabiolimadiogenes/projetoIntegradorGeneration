@@ -5,4 +5,5 @@ export class Login
     public email: string;
     public senha: string;
     public token: string;
+    public tipo: string;
 }

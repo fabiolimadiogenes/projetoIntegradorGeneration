@@ -1,3 +1,4 @@
+import { AuthService } from './../service/auth.service';
 import { Categoria } from './../model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { ProdutoService } from './../service/produto.service';
@@ -22,7 +23,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    public authService: AuthService
   ) { }
 
   ngOnInit(){
@@ -31,7 +33,7 @@ export class HomeComponent implements OnInit {
       alert("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
-    
+
     this.findAllProduto()
   }
 

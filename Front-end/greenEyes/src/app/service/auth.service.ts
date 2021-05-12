@@ -17,7 +17,7 @@ export class AuthService {
 
   entrar(userLogin: Login): Observable<Login>
   {
-    return this.http.post<Login>('http://localhost:8080/usuarios/logar', userLogin)
+    return this.http.post<Login>('http://localhost:8080/usuarios/logar', userLogin )
   }
 
   cadastrar(user: Usuario): Observable<Usuario>
@@ -35,5 +35,16 @@ export class AuthService {
     }
 
     return ok
+  }
+
+  adm(){
+    let ok: boolean = false
+
+    if (environment.tipo == "adm"){
+      ok = true
+    }
+
+    return ok
+
   }
 }
