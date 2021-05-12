@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
     environment.nome = ""
     environment.foto = ""
     environment.id = 0
-
   }
 
   entrar(){

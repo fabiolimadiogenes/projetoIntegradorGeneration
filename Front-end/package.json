@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mdbootstrap": "^4.19.2",
+    "ngx-bootstrap": "^6.2.0"
+  }
+}

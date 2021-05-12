@@ -27,8 +27,10 @@ public class Produto {
 	
 	private double desconto;
 	
+	private String foto;
+	
 	@NotNull
-	private int descricao;
+	private String descricao;
 
 	@NotNull
 	private int quantidade;
@@ -65,6 +67,14 @@ public class Produto {
 		this.desconto = desconto;
 	}
 
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public int getQuantidade() {
 		return quantidade;
 	}
@@ -81,12 +91,12 @@ public class Produto {
 		this.categoria = categoria;
 	}
 
-	public int getDescricao() {
-		return descricao;
+	public String getFoto() {
+		return foto;
 	}
 
-	public void setDescricao(int descricao) {
-		this.descricao = descricao;
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 	
 	
