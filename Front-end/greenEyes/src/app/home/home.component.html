@@ -33,7 +33,7 @@
       <!--Inicio produto-->
       <div class="col-md-4" *ngFor="let i of listaProdutos" >
         <div class="card w-100 ">
-          <a href="" class="produtos">
+          <a [routerLink]="['/home-produto', i.id]" class="produtos">
             <img class="card-img-top" src={{i.foto}} alt="Imagem de capa do card">
             <div class="card-body">
                 <div class="row">

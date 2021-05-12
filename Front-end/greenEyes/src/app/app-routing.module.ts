@@ -14,6 +14,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { HomeProdutoComponent } from './home-produto/home-produto.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "login", pathMatch: "full"},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:"cadastro", component: CadastroComponent},
   {path:"categoria", component: CategoriaComponent},
   {path:"produto", component: ProdutoComponent},
+  {path:"home-produto/:id",component: HomeProdutoComponent},
 
   {path: 'categoria-edit/:id', component: CategoriaEditComponent},
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},

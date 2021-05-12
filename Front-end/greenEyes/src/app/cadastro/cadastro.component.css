@@ -1,71 +1,43 @@
 #img-bg{
-    background-image: url("https://i.imgur.com/QM10oTw.png");
-    min-height: 800px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.b-Cancel{
-  background: transparent;
-  border-color: #0d2622;
-  border-radius: 6pt;
-  transition-duration: 300ms;
-}
-
-.b-Cancel:hover{
-  transition-duration: 300ms;
-  background-color:#a50808;
-  border-color: #a50808;
-  color: white;
-}
-
-.b-Cadas{
-  background: transparent;
-  border-color: #0d2622;
-  border-radius: 6pt;
-  transition-duration: 300ms;
-}
-
-.b-Cadas:hover{
-
-  transition-duration: 300ms;
-  background-color:#2F734C;
-  border-color: #2F734C;
-  color: white;
-}
-
-.cadastroBox{
-  width: 50%;
-  background-color: rgb(255, 255, 255);
-  border-width: 10px;
-  border-color: rgb(255, 255, 255);
-  border-radius: 8%;
-  margin-top: 7%;
-}
-
-.third{
-  width: 33%;
-  justify-content: space-around;
-}
-
-.fill{
-  height:100%;
-}
-
-.background{
   background-color: #0d2622;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-.f-17{
-  font-size: 17px;
+.btnEnter{
+  background-color: transparent;
+  border-color: rgba(2, 65, 2, 0.233);
+  border-radius: 6pt;
+  transition: all .5s ease-out;
+  font-weight: bold;
+  padding: 7px;
+  font-size: 12pt;
+  border-width: medium;
+
 }
 
-.form-group:hover{
-  transition-duration: 300ms;
-  font-size: 20px;
+.btnEnter:hover{
+  color: white;
+  background-color: rgb(15, 85, 15);
 }
 
-.form-group{
-  transition-duration: 300ms;
+.bg-box{
+background-color: rgba(0, 0, 0, 0.034);
+}
+
+.bg-box:active{
+color: white;
+}
+
+.fs-13{
+font-size: 13px;
+
+}
+
+a, .cad{
+color: #28b151;
 }
