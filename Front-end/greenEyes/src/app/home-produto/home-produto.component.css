@@ -1,0 +1,15 @@
+#home-categoria{
+    border-color: #dcdcdc;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+
+#home-categoria-list{
+    border-color:black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 24px 16px;
+}
