@@ -27,6 +27,7 @@ export class CategoriaComponent implements OnInit {
       alert("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
+    
     this.findAllCategoria();
   }
 
