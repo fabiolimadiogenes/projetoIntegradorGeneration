@@ -19,14 +19,18 @@ public class Produto {
 	private long id;
 	
 	@NotNull
-	@Size (min = 5, max = 100)
+	@Size (max = 100)
 	private String nome;
 	
 	@NotNull
 	private double preco;
 	
-	@NotNull
 	private double desconto;
+	
+	private String foto;
+	
+	@NotNull
+	private String descricao;
 
 	@NotNull
 	private int quantidade;
@@ -63,6 +67,14 @@ public class Produto {
 		this.desconto = desconto;
 	}
 
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public int getQuantidade() {
 		return quantidade;
 	}
@@ -78,4 +90,14 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+	
 }
