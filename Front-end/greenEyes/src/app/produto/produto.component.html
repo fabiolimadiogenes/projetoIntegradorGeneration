@@ -1,15 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid bg-color">
     <div class="row">
         <div class="col-md-12 mt-5">
 
             <div class="mb-5">
-              <h1 class="text-center f-produto">Produtos</h1>
+              <h1 class="text-center f-produto text-white">Cadastro de Produtos</h1>
             </div>
-
-            <div>
-              <h1  class="text-center">Veja aqui todos os produtos</h1>
-            </div>
-
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
                 <div class="col-md-3">
@@ -20,44 +15,51 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                      <input [(ngModel)]="produto.preco" class="form-control" type="number" id="floatingNome" placeholder="Informe o preço">
+                      <input [(ngModel)]="produto.preco" class="form-control mt-3" type="number" id="floatingPreco" placeholder="">
+                      <label for="floatingPreco">Preço</label>
                     </div>
 
-                    <div class="form-group">
-                      <input [(ngModel)]="produto.desconto" class="form-control" type="number" id="desconto" placeholder="Informe o desconto">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="produto.desconto" class="form-control mt-3" type="number" id="floatingDesconto" placeholder="">
+                      <label for="floatingDesconto">Desconto</label>
                     </div>
 
-                    <div class="form-group">
-                      <input [(ngModel)]="produto.descricao" class="form-control" type="text" id="descricao" placeholder="Informe a descrição">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="produto.descricao" class="form-control mt-3" type="text" id="floatingDescricao" placeholder="">
+                      <label for="floatingDescricao">Descrição</label>
                     </div>
 
-                    <div class="form-group">
-                      <input [(ngModel)]="produto.foto" class="form-control" type="text" id="foto" placeholder="Insira o link da foto">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="produto.foto" class="form-control" type="text" id="floatingFoto" placeholder="">
+                      <label for="floatingFoto">Foto</label>
                     </div>
 
-                    <div class="form-group">
-                      <input [(ngModel)]="produto.quantidade" class="form-control" type="number" id="quantidade" placeholder="Informe a quantidade">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="produto.quantidade" class="form-control" type="number" id="floatingQuantidade" placeholder="">
+                      <label for="floatingQuantidade">Quantidade</label>
                     </div>
 
-                    <select [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="form-control" name="categoria" id="categoria">
-                        <option *ngFor="let i of listaCategoria" value={{i.id}}>{{i.nome}}</option>
-                    </select>
+                    <div class="col-md-14 my-1">
+                      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preferência</label>
+                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Escolha a categoria</option>
+                        <option *ngFor="let i of listaCategoria" value={{i.id}}>{{i.nome}} </option>
 
-
-
-                    <div class="d-flex justify-content-center mt-3">
-                        <button class="btn btn-light" (click)="cadastrar()">Cadastrar</button>
+                      </select>
                     </div>
+
+                    <div class="col text-center mt-3">
+                      <button type="submit" class="btn btnColor btn-block" (click)="cadastrar()">Cadastrar</button>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
-
 <div class="container">
-  <hr>
+
     <div class="row mt-5">
         <div class="col-md-12">
             <h2 class="text-center">Todos os Produtos Cadastrados</h2>
@@ -65,7 +67,7 @@
     </div>
 
     <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -87,9 +89,9 @@
                         <td>{{i.descricao}}</td>
                         <td>{{i.quantidade}}</td>
                         <td>{{i.categoria.nome}}</td>
-                        <td class="d-flex justify-content-end">
-                            <button class="btn btn-info mr-3" [routerLink]="['/produto-edit', i.id]">Editar</button>
-                            <button class="btn btn-info" [routerLink]="['/produto-delete', i.id]">Apagar</button>
+                        <td class="d-flex justify-content-end ">
+                            <button class="btn btnColor2 btn mr-3 " [routerLink]="['/produto-edit', i.id]">Editar</button>
+                            <button class="btn btnColor2 btn" [routerLink]="['/produto-delete', i.id]">Apagar</button>
                         </td>
                     </tr>
                 </tbody>
