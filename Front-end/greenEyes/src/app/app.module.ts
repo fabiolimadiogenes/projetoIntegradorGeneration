@@ -26,12 +26,9 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { HomeProdutoComponent } from './home-produto/home-produto.component';
-<<<<<<< HEAD
 import { AlertsComponent } from './alerts/alerts.component';
 
-=======
 import { CarrinhoComponent } from './carrinho/carrinho.component';
->>>>>>> f482403a4ebf5977eaf290c8ac3760ba08474a00
 
 @NgModule({
   declarations: [
@@ -50,11 +47,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     CategoriaComponent,
     ProdutoComponent,
     HomeProdutoComponent,
-<<<<<<< HEAD
-    AlertsComponent
-=======
+    AlertsComponent,
     CarrinhoComponent
->>>>>>> f482403a4ebf5977eaf290c8ac3760ba08474a00
   ],
   imports: [
     BrowserModule,

@@ -30,13 +30,8 @@ export class HomeProdutoComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private router: Router,
-<<<<<<< HEAD
     private route: ActivatedRoute,
     private alerts: AlertsService
-=======
-    private route: ActivatedRoute
-    
->>>>>>> f482403a4ebf5977eaf290c8ac3760ba08474a00
   ) { }
 
   ngOnInit() {
@@ -57,13 +52,13 @@ export class HomeProdutoComponent implements OnInit {
 
     })
   }
-  
+
   }
 
 
 
- 
- 
- 
+
+
+
 
 
