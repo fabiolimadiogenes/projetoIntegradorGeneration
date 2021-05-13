@@ -1,3 +1,4 @@
+import { AlertsService } from './../../service/alerts.service';
 import { environment } from './../../../environments/environment.prod';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriaService } from './../../service/categoria.service';
@@ -16,14 +17,14 @@ export class CategoriaEditComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
-
+    private route: ActivatedRoute,
+    private alerts: AlertsService
   ) { }
 
   ngOnInit(){
     if(environment.token == "")
     {
-      alert("Sua sessão expirou");
+      this.alerts.showAlertInfo("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
 
@@ -40,7 +41,7 @@ export class CategoriaEditComponent implements OnInit {
   atualizar(){
     this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) =>{
       this.categoria = resp
-      alert("Categoria atualizada com sucesso!")
+      this.alerts.showAlertSuccess("Categoria atualizada com sucesso!")
       this.router.navigate(["/categoria"])
     })
   }

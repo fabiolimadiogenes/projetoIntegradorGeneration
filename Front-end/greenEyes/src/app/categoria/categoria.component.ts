@@ -1,3 +1,4 @@
+import { AlertsService } from './../service/alerts.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -17,7 +18,8 @@ export class CategoriaComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alerts: AlertsService
     ) { }
 
   ngOnInit()
@@ -27,7 +29,7 @@ export class CategoriaComponent implements OnInit {
       alert("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
-    
+
     this.findAllCategoria();
   }
 
@@ -42,7 +44,7 @@ export class CategoriaComponent implements OnInit {
   {
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp;
-      alert("Categoria cadastrado com sucesso");
+      this.alerts.showAlertSuccess("Categoria cadastrado com sucesso");
       this.findAllCategoria();
       this.categoria = new Categoria();
     })

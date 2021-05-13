@@ -1,3 +1,4 @@
+import { AlertsService } from './../../service/alerts.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
@@ -18,14 +19,15 @@ export class CategoriaDeleteComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerts: AlertsService
 
   ) { }
 
   ngOnInit(): void {
     if(environment.token == "")
     {
-      alert("Sua sessão expirou");
+      this.alerts.showAlertInfo("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
     this.idCategoria = this.route.snapshot.params['id']
@@ -40,7 +42,7 @@ export class CategoriaDeleteComponent implements OnInit {
 
   apagar(){
     this.categoriaService.deleteCategoria(this.idCategoria).subscribe(()=>{
-      alert('Categoria apagada com sucesso!')
+      this.alerts.showAlertSuccess('Categoria apagada com sucesso!')
       this.router.navigate(['/categoria'])
     })
   }

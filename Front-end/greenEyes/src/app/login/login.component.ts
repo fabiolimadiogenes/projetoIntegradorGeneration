@@ -1,5 +1,5 @@
 import { AlertsService } from './../service/alerts.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Login } from '../model/Login';
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(["/home"])
     }, erro =>{
       if(erro.status == 500){
-      this.alerts.showAlertDanger("Usuario ou senha estão incorretos!")
+      this.alerts.showAlertDanger('Usuario ou senha estão incorretos!')
       }
     })
   }
