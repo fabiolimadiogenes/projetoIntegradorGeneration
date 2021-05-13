@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
@@ -7,22 +7,17 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-home-produto',
-  templateUrl: './home-produto.component.html',
-  styleUrls: ['./home-produto.component.css']
+  selector: 'app-carrinho',
+  templateUrl: './carrinho.component.html',
+  styleUrls: ['./carrinho.component.css']
 })
-
-export class HomeProdutoComponent implements OnInit {
+export class CarrinhoComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
   categoria: Categoria = new Categoria();
   listaCategoria: Categoria[];
   idProduto: number;
-  descricaoProduto: string;
-  nomeProduto: string;
-  qntProduto : number;
-
 
   
   constructor(
@@ -30,7 +25,6 @@ export class HomeProdutoComponent implements OnInit {
     private categoriaService: CategoriaService,
     private router: Router,
     private route: ActivatedRoute
-    
   ) { }
 
   ngOnInit() {
@@ -39,25 +33,14 @@ export class HomeProdutoComponent implements OnInit {
       alert("Sua sessão expirou")
       this.router.navigate(["/login"])
     }
-    let id = this.route.snapshot.params["id"]
-    this.findByIdProduto(id)
-    
-
+    this.findAllProduto()
   }
 
-  findByIdProduto(id: number){
-    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) =>{
-      this.produto = resp
-
+  findAllProduto()
+  {
+    this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp;
     })
   }
-  
-  }
 
-
-
- 
- 
- 
-
-
+}

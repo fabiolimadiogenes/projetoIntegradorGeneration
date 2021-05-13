@@ -1,7 +1,7 @@
-import { AuthService } from './../service/auth.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-menu',
@@ -12,11 +12,14 @@ export class MenuComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public auth: AuthService
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+
   }
+
+ 
 
   sair(){
     this.router.navigate(["/login"])
