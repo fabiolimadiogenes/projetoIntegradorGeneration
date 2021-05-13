@@ -41,10 +41,8 @@
 
                     <div class="col-md-14 my-1">
                       <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preferência</label>
-                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected>Escolha a categoria</option>
-                        <option *ngFor="let i of listaCategoria" value={{i.id}}>{{i.nome}} </option>
-
+                      <select [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option *ngFor="let i of listaCategoria" value={{i.id}} selected >{{i.nome}} </option>
                       </select>
                     </div>
 
@@ -75,7 +73,8 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Preço</th>
                         <th scope="col">Desconto</th>
-                        <th scope="col">descrição</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Foto</th>
                         <th scope="col">Quantidade</th>
                         <th scope="col">Categoria</th>
                         <th scope="col"></th>
@@ -88,6 +87,7 @@
                         <td>{{i.preco}}</td>
                         <td>{{i.desconto}}</td>
                         <td>{{i.descricao}}</td>
+                        <td>{{i.foto}}</td>
                         <td>{{i.quantidade}}</td>
                         <td>{{i.categoria.nome}}</td>
                         <td class="d-flex justify-content-end ">

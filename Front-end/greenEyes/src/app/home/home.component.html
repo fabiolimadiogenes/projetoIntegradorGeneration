@@ -1,13 +1,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="https://i.imgur.com/RipzYkK.jpg" alt="Primeiro Slide" >
+        <img class="d-block " src="https://i.imgur.com/RipzYkK.jpg" alt="Primeiro Slide" >
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="https://i.imgur.com/cgsJfW3.jpg" alt="Segundo Slide">
+        <img class="d-block " src="https://i.imgur.com/cgsJfW3.jpg" alt="Segundo Slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="https://i.imgur.com/sNTteOW.jpg" alt="Terceiro Slide">
+        <img class="d-block " src="https://i.imgur.com/sNTteOW.jpg" alt="Terceiro Slide">
     </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -34,7 +34,7 @@
       <div class="col-md-4 mt-3" *ngFor="let i of listaProdutos" >
         <div class="card w-100 ">
           <a [routerLink]="['/home-produto', i.id]" class="produtos">
-            <img class="card-img-top" src={{i.foto}} alt="Imagem de capa do card">
+            <img width="500" height="300" class="card-img-top" src={{i.foto}} alt="Imagem de capa do card">
             <div class="card-body">
                 <div class="row">
                     <h2 class="text-center mr-2">R$ {{(i.preco - i.desconto).toFixed(2)}}</h2>
