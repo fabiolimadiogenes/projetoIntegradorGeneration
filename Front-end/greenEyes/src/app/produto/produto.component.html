@@ -1,19 +1,26 @@
 <div class="container-fluid">
-    <div class="row bg-secondary">
-        <div class="col-md-12 text-light mt-5">
+    <div class="row">
+        <div class="col-md-12 mt-5">
 
-            <p style="font-size:56pt" class="text-center mb-3">Produtos</p>
-            <p style="font-size:18pt" class="text-center mt-3">Veja aqui todos os produtos</p>
+            <div class="mb-5">
+              <h1 class="text-center f-produto">Produtos</h1>
+            </div>
+
+            <div>
+              <h1  class="text-center">Veja aqui todos os produtos</h1>
+            </div>
+
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
                 <div class="col-md-3">
 
-                    <div class="form-group">
-                      <input [(ngModel)]="produto.nome" class="form-control" type="text" id="nome" placeholder="Digite o nome">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="produto.nome" class="form-control mt-3" type="text" id="floatingNome" placeholder="">
+                      <label for="floatingNome">Nome</label>
                     </div>
 
-                    <div class="form-group">
-                      <input [(ngModel)]="produto.preco" class="form-control" type="number" id="preco" placeholder="Informe o preço">
+                    <div class="form-floating mb-3">
+                      <input [(ngModel)]="produto.preco" class="form-control" type="number" id="floatingNome" placeholder="Informe o preço">
                     </div>
 
                     <div class="form-group">
@@ -36,7 +43,9 @@
                         <option *ngFor="let i of listaCategoria" value={{i.id}}>{{i.nome}}</option>
                     </select>
 
-                    <div class="d-flex justify-content-center mt-5">
+
+
+                    <div class="d-flex justify-content-center mt-3">
                         <button class="btn btn-light" (click)="cadastrar()">Cadastrar</button>
                     </div>
                 </div>
@@ -45,8 +54,10 @@
     </div>
 </div>
 
-<div class="container">
 
+
+<div class="container">
+  <hr>
     <div class="row mt-5">
         <div class="col-md-12">
             <h2 class="text-center">Todos os Produtos Cadastrados</h2>

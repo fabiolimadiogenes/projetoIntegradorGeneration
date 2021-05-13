@@ -1,3 +1,4 @@
+import { AlertsService } from './../service/alerts.service';
 import { AuthService } from './../service/auth.service';
 import { Categoria } from './../model/Categoria';
 import { Produto } from 'src/app/model/Produto';
@@ -24,13 +25,14 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
-    public authService: AuthService
+    public authService: AuthService,
+    private alerts: AlertsService
   ) { }
 
   ngOnInit(){
     if(environment.token == "")
     {
-      alert("Sua sessão expirou");
+      this.alerts.showAlertInfo("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
 

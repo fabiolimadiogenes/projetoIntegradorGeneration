@@ -1,3 +1,4 @@
+import { AlertsService } from './../service/alerts.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterEvent } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -19,23 +20,24 @@ export class HomeProdutoComponent implements OnInit {
   listaCategoria: Categoria[];
   idProduto: number;
 
-  
+
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerts: AlertsService
   ) { }
 
   ngOnInit() {
     if(environment.token == "")
     {
-      alert("Sua sessão expirou")
+      this.alerts.showAlertInfo("Sua sessão expirou")
       this.router.navigate(["/login"])
     }
     let id = this.route.snapshot.params["id"]
     this.findByIdProduto(id)
-    
+
 
   }
 

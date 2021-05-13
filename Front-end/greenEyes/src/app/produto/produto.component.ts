@@ -1,3 +1,4 @@
+import { AlertsService } from './../service/alerts.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -22,14 +23,15 @@ export class ProdutoComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alerts: AlertsService
     ) { }
 
   ngOnInit()
   {
     if(environment.token == "")
     {
-      alert("Sua sessão expirou");
+      this.alerts.showAlertInfo("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
     this.findAllProduto();
@@ -63,7 +65,7 @@ export class ProdutoComponent implements OnInit {
     this.produto.categoria = this.categoria;
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
-      alert("Produto cadastrado com sucesso");
+      this.alerts.showAlertSuccess("Produto cadastrado com sucesso");
       this.findAllProduto();
       this.produto = new Produto();
     })
