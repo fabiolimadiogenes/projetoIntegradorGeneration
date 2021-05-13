@@ -6,10 +6,15 @@
 }
 
 
-#home-categoria-list{
-    border-color:black;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 10px;
-    padding: 24px 16px;
+
+.descricao{
+    text-overflow: ellipsis;
+    overflow:hidden;  
+
+
+}
+
+.vertical{
+    vertical-align: middle;
+    display: table-cell;
 }

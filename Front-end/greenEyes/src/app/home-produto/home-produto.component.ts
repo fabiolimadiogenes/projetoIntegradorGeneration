@@ -12,21 +12,31 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './home-produto.component.html',
   styleUrls: ['./home-produto.component.css']
 })
+
 export class HomeProdutoComponent implements OnInit {
 
   produto: Produto = new Produto();
-  listaProduto: Produto[];
+  listaProdutos: Produto[];
   categoria: Categoria = new Categoria();
   listaCategoria: Categoria[];
   idProduto: number;
+  descricaoProduto: string;
+  nomeProduto: string;
+  qntProduto : number;
+
 
 
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private router: Router,
+<<<<<<< HEAD
     private route: ActivatedRoute,
     private alerts: AlertsService
+=======
+    private route: ActivatedRoute
+    
+>>>>>>> f482403a4ebf5977eaf290c8ac3760ba08474a00
   ) { }
 
   ngOnInit() {
@@ -44,8 +54,16 @@ export class HomeProdutoComponent implements OnInit {
   findByIdProduto(id: number){
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto) =>{
       this.produto = resp
+
     })
+  }
+  
   }
 
 
-}
+
+ 
+ 
+ 
+
+
