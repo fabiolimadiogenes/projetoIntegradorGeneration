@@ -2,7 +2,20 @@
   margin-bottom: 40px;
 }
 
-#teste{
-  /* background-image: url('https://imgur.com/9Xn1LCt.png%27); /
-  / background-color: ; */
+.btnColor2{
+  background-color: white;
+  border-color: rgba(2, 65, 2, 0.233);
+  border-radius: 6pt;
+  transition: all .5s ease-out;
+  font-weight: bold;
+  padding: 7px;
+  font-size: 12pt;
+  border-width: medium;
+  color: black;
+
+}
+
+.btnColor2:hover{
+  color: white;
+  background-color: rgb(15, 85, 15);
 }

@@ -31,10 +31,11 @@
     <div class="card-deck row-flex" >
 
       <!--Inicio produto-->
-      <div class="col-md-4 mt-3" *ngFor="let i of listaProdutos" >
+      <div class="col-md-4 mt-4" *ngFor="let i of listaProdutos" >
         <div class="card w-100 ">
           <a [routerLink]="['/home-produto', i.id]" class="produtos">
-            <img width="500" height="300" class="card-img-top" src={{i.foto}} alt="Imagem de capa do card">
+            <!-- width="500" height="300" em teste -->
+            <img width="500" height="300"  class="card-img-top" src={{i.foto}} alt="Imagem de capa do card">
             <div class="card-body">
                 <div class="row">
                     <h2 class="text-center mr-2">R$ {{(i.preco - i.desconto).toFixed(2)}}</h2>
