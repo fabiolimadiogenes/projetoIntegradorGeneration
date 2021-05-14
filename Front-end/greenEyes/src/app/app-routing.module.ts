@@ -1,3 +1,4 @@
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -33,10 +34,11 @@ const routes: Routes = [
 
   {path: 'categoria-edit/:id', component: CategoriaEditComponent},
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
-  
+
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
-  {path: "carrinho", component:CarrinhoComponent}
+  {path: "carrinho", component:CarrinhoComponent},
+  {path:"pesquisa/:nome", component: PesquisaComponent}
 
 ];
 
