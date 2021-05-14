@@ -1,3 +1,4 @@
+import { AlertsService } from './../service/alerts.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -11,12 +12,15 @@ export class SobreNosComponent implements OnInit {
 
   qr: string = "../assets/img/QR_code_1.jpg"
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private alerts: AlertsService
+    ) { }
 
   ngOnInit(){
     if(environment.token == "")
     {
-      alert("Sua sessÃ£o expirou");
+      this.alerts.showAlertSuccess("Sua sessão expirou");
       this.router.navigate(["/login"]);
     }
     const element1 = document.getElementById("id_1")!
