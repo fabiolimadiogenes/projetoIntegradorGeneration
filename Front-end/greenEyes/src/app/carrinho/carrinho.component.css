@@ -1,0 +1,35 @@
+#foto{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#texto{
+    color: #00a650;
+    font-weight: 600;
+
+}
+
+#descricao{
+    line-height: 25px;
+    margin-left: -60px;
+    margin-top: 20px;
+}
+
+.linha-vertical{
+    height: 100%;
+    border-right: 1px solid;
+}
+
+.linha-vertical-esquerda{
+    height: 100%;
+    border-left: 1px solid;
+}
+.justify-content-center{
+    justify-content: center;
+}
+
+.overflow{
+    text-overflow: ellipsis;
+    overflow:hidden;
+}

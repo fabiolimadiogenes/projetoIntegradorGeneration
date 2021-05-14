@@ -1,4 +1,5 @@
 import { AuthService } from './../service/auth.service';
+import { ProdutoService } from './../service/produto.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
@@ -10,15 +11,24 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class MenuComponent implements OnInit {
 
+  valorPesquisa: string;
+
   constructor(
     private router: Router,
-    public auth: AuthService
+    public auth: AuthService,
+    private produtoService: ProdutoService,
   ) { }
 
   ngOnInit(): void {
   }
 
-  sair(){
+  pesquisar() {
+    if (this.valorPesquisa) {
+      this.router.navigate([`/pesquisa/${this.valorPesquisa}`]);
+    }
+  }
+
+  sair() {
     this.router.navigate(["/login"])
     environment.token = ""
     environment.nome = ""

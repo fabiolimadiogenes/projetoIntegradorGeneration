@@ -1,8 +1,9 @@
+import { Produto } from 'src/app/model/Produto';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, SystemJsNgModuleLoader } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { Produto } from '../model/Produto';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,11 @@ export class ProdutoService {
   getByIdProduto(id: number): Observable<Produto>
   {
     return this.http.get<Produto>(`http://localhost:8080/produto/${id}`, this.token)
+  }
+
+  getByNomeProduto(nome: string): Observable<Produto[]>
+  {
+    return this.http.get<Produto[]>(`http://localhost:8080/produto/nome/${nome}`, this.token)
   }
 
   postProduto(produto: Produto): Observable<Produto>

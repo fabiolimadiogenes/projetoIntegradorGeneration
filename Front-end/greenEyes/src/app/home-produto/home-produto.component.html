@@ -3,20 +3,20 @@
 </div>
 <div class="container"id="home-categoria">
     <div class="row">
-        <div class="col-md-8 d-flex" >
-            <img src="{{produto.foto}}" alt="Foto produto" width="668" height="468">
+        <div class="col-md-6 d-flex" >
+            <img src="{{produto.foto}}" alt="Foto produto" width="569" height="400">
         </div>
-        <div class="col-md-4 justify-content-center d-flex" id="home-categoria-list">
-            <ul class="list-group list-group-flush">
-                <li class='list-group-item '>Nome: {{produto.nome}}</li>
-                <li class='list-group-item'>Preço: {{produto.preco}}R$</li>
-                <li class='list-group-item'>Desconto:{{produto.desconto}}R$</li>
-                <li class='list-group-item'>Descrição: {{produto.descricao}}</li>
+        <div class="col-md-6 justify-content-center d-block mt-4" >
+            <ul class="list-group">
+                <li class='list-group-item descricao'>Nome: {{produto.nome}}</li>
+                <li class='list-group-item descricao'>Descricao: {{produto.descricao}}</li>
+                <li class='list-group-item'>Preço: R$ {{produto.preco}}</li>
+                <li class='list-group-item'>Desconto: R$ {{produto.desconto}}</li>
                 <li class='list-group-item'>Quantidade: {{produto.quantidade}}</li>
                 <li class='list-group-item'>Categoria: {{produto.categoria.nome}}</li>
                 <hr>
                 <button class="btn btn-primary mb-3">Comprar Agora</button>
-                <button class="btn btn-light">Adicionar ao carrinho</button>
+                <button class="btn btn-light mb-2" routerLink = '/carrinho'>Adicionar ao carrinho</button>
             </ul>
         </div>
     </div>

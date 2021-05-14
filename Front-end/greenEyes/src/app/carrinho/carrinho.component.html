@@ -1,0 +1,26 @@
+<div class="container" *ngFor='let i of listaProdutos'>
+    <div class="row">
+        <hr>
+        <div class="col-md-3 d-flex linha-vertical justify-content-center">
+            <img id="foto" src="{{i.foto}}">
+                <h3 id="texto">Adicionado</h3>
+                <p class= "overflow" id="descricao">{{i.descricao}}</p>
+        </div>
+        <div class="col-md-3 justify-content-center linha-vertical">
+            <h5>Adicione mais produtos e aproveite!</h5>
+            <p class="overflow">Quantidade de produtos do tipo: {{i.nome}} no carrinho: {{i.quantidade}}</p>
+            <h5>Preço a se pagar: R$ {{i.preco * i.quantidade}} </h5>
+        </div>
+
+        <div class="col-md-3 justify-content-center">
+            <h5>Frete Grátis apartir de 2000000 dolares</h5>
+            <h5></h5>
+        </div>
+        <div class="col-md-3 linha-vertical-esquerda">
+            <button class="btn btn-info">Comprar do carrinho</button>
+            <button class="btn btn-success mt-2" routerLink='/home'>Voltar ao inicio</button>
+        </div>
+
+
+    </div>
+</div>
