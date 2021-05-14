@@ -1,0 +1,57 @@
+<div class="container mb-3">
+  <div class="d-flex justify-content-center">
+    <div class="text-center mt-5 mb-5">
+      <h2>
+        <img src="https://imgur.com/6KyPwKo.jpg" width="50" height="50" />
+        Resultados da pesquisa:
+      </h2>
+    </div>
+  </div>
+
+  <div class="card-deck row-flex" *ngIf="listaProdutos.length > 0">
+    <!--Inicio produto-->
+
+    <div class="col-md-4 mt-4" *ngFor="let i of listaProdutos">
+      <div class="card w-100">
+        <a [routerLink]="['/home-produto', i.id]" class="produtos">
+          <!-- width="500" height="300" em teste -->
+          <img
+            width="500"
+            height="300"
+            class="card-img-top"
+            src="{{ i.foto }}"
+            alt="Imagem de capa do card"
+          />
+          <div class="card-body">
+            <div class="row">
+              <h2 class="text-center mr-2">
+                R$ {{ (i.preco - i.desconto).toFixed(2) }}
+              </h2>
+            </div>
+            <p class="text-center">{{ i.nome }}</p>
+          </div>
+        </a>
+        <div class="card-footer text-center">
+          <button
+            class="btn btn-sm btn-outline-danger me-2 bmenu2"
+            type="button"
+          >
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </button>
+          <a class=""></a>
+        </div>
+      </div>
+    </div>
+    <!--Fim produto-->
+  </div>
+</div>
+
+<div class="container" *ngIf="listaProdutos.length == 0">
+  <div class="d-flex justify-content-center">
+    <div class="text-center mt-5 mb-5">
+      <img src="https://imgur.com/HIz6C5n.jpg" width="150" height="150" />
+      <h2>Nenhum produto encontrado</h2>
+      <h4>Tente usar palavras-chave diferentes ou mais genéricas</h4>
+    </div>
+  </div>
+</div>

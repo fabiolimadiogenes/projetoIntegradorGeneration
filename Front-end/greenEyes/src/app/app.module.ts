@@ -29,6 +29,8 @@ import { HomeProdutoComponent } from './home-produto/home-produto.component';
 import { AlertsComponent } from './alerts/alerts.component';
 
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     ProdutoComponent,
     HomeProdutoComponent,
     AlertsComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    PesquisaComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
