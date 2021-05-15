@@ -53,22 +53,22 @@ export class SobreNosComponent implements OnInit {
   MostrarQR(id:number){
         // this.qr = "../assets/img/QR_code_" + id + ".jpg"
     if(id == 1){
-      this.qr = "https://i.imgur.com/VRinsEP.png"
+      this.qr = "https://i.imgur.com/gQaPn8Y.png"
     }
     if(id == 2){
-      this.qr = "https://i.imgur.com/FXqNbnl.png"
+      this.qr = "https://i.imgur.com/DnhiOc9.png"
     }
     if(id == 3){
-      this.qr = "https://i.imgur.com/zUFomST.png"
+      this.qr = "https://i.imgur.com/i5zIjLP.png"
     }
     if(id == 4){
-      this.qr = "https://i.imgur.com/utPqA0U.png"
+      this.qr = "https://i.imgur.com/gTpCSeD.png"
     }
     if(id == 5){
-      this.qr = "https://i.imgur.com/7mudkqz.png"
+      this.qr = "https://i.imgur.com/Y1bP6lg.png"
     }
     if(id == 6){
-      this.qr = "https://i.imgur.com/yy3OlLI.png"
+      this.qr = "https://i.imgur.com/MBRLXlH.png"
     }
 
   }

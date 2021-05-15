@@ -5,3 +5,31 @@
 .bg-color{
   background-color: rgb(108, 155, 108);
 }
+
+.p-equipe{
+  font-size: 24pt;
+}
+
+.fundo{
+  background-image: url(https://i.imgur.com/xaRw2p8.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.logo{
+  width: 100%;
+}
+
+.fab{
+  font-size: 20pt;
+  color: rgb(4, 48, 4);
+  transition: ease-in-out;
+  transition-duration: 100ms;
+  transition-delay: 100ms;
+}
+
+.fab:hover{
+  font-size: 22pt;
+  color: rgb(0, 177, 0);
+}
