@@ -8,41 +8,35 @@
     </div>
     <hr />
 
-    <!--Inicio produto-->
-    <div class="container mb-4 mt-4">
-      <div class="col-md-4 mt-4" *ngFor="let i of listaProdutos">
-        <div class="card w-100">
-          <a [routerLink]="['/home-produto', i.id]" class="produtos">
-            <!-- width="500" height="300" em teste -->
-            <img
-              width="500"
-              height="300"
-              class="card-img-top"
-              src="{{ i.foto }}"
-              alt="Imagem de capa do card"
-            />
-            <div class="card-body">
-              <div class="row">
-                <h2 class="text-center mr-2">
-                  R$ {{ (i.preco - i.desconto).toFixed(2) }}
-                </h2>
+    <div class="container mb-3" >
+      <div class="card-deck row-flex" >
+
+        <!--Inicio produto-->
+        <div class="col-md-4 mt-4" *ngFor="let i of listaProdutos" >
+          <div class="card w-100 ">
+            <a [routerLink]="['/home-produto', i.id]" class="produtos">
+              <!-- width="500" height="300" em teste -->
+              <img width="500" height="300"  class="card-img-top" src={{i.foto}} alt="Imagem de capa do card">
+              <div class="card-body">
+                  <div class="row">
+                      <h2 class="text-center mr-2">R$ {{(i.preco - i.desconto).toFixed(2)}}</h2>
+                  </div>
+                  <p class="text-center">{{i.nome}}</p>
               </div>
-              <p class="text-center">{{ i.nome }}</p>
-            </div>
-          </a>
-          <div class="card-footer text-center">
-            <button
-              class="btn btn-sm btn-outline-danger me-2 bmenu2"
-              type="button"
-            >
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </button>
-            <a class=""></a>
+            </a>
+              <div class="card-footer text-center">
+                <button class="btn btn-sm btn-outline-danger me-2 bmenu2" type="button"><i class=" fa fa-heart" aria-hidden="true"></i></button>
+                  <a class=""></a>
+              </div>
           </div>
         </div>
-      </div>
-      <!--Fim produto-->
+        <!--Fim produto-->
+
     </div>
+  </div>
+
+
+
   </div>
 </div>
 

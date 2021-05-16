@@ -71,3 +71,18 @@ mat-icon {
   color: #aaa;
   font-style: italic;
 }
+
+.ico-fav:hover{
+  transition: ease-in-out;
+  transition-duration: 100ms;
+  transition-delay: 100ms;
+  color: darkred;
+}
+
+.ico-car-user:hover{
+  transition: ease-in-out;
+  transition-duration: 100ms;
+  transition-delay: 100ms;
+  color: rgb(108, 155, 108);
+}
+

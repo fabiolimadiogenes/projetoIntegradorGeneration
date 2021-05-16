@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+import { AlertsService } from './../service/alerts.service';
+import { environment } from 'src/environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private alerts: AlertsService,
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    if(environment.token == "")
+    {
+      this.alerts.showAlertInfo("Sua sessão expirou");
+      this.router.navigate(["/login"]);
+    }
   }
 
 }
